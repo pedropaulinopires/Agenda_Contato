@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/index.css">
+    <link rel="stylesheet" href="estilos/index-media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Agenda de Contatos</title>
+</head>
+<body >
+    <header>
+        <div id="menu-maior">
+            <div id="links">
+                <a href="#apresentacao" onclick="closeNav()">O que é</a>
+                <a href="#tecnologias" onclick="closeNav()">Técnologias</a>
+                <a href="https://www.instagram.com/pedropaulinopires/" target="_blank" rel="external" onclick="closeNav()">Contato</a>
+                <a href="https://github.com/pedropaulinopires" target="_blank" rel="external" onclick="closeNav()">Git Hub</a>
+            </div>
+        </div>
+        <div id="menu-hamburguer">
+            <span id="btn-open" onclick="openNav()" class="material-symbols-outlined">
+                menu
+                </span>
+                <div id="myNav">
+                    <span id="btn-open" onclick="closeNav()" class="material-symbols-outlined">
+                        close
+                        </span>
+                    <div id="overlay" style="padding-top: 50px;">
+                        <div id="overlay-content">
+                            <a href="#apresentacao" onclick="closeNav()">O que é</a>
+                            <br>
+                            <a href="#tecnologias" onclick="closeNav()">Técnologias</a>
+                            <br>
+                            <a href="https://www.instagram.com/pedropaulinopires/" target="_blank" rel="external" onclick="closeNav()">Contato</a>
+                            <br>
+                            <a href="https://github.com/pedropaulinopires" target="_blank" rel="external" onclick="closeNav()">Git Hub</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div id="opcoes">
+            <a href="criar.jsp" target="_self" rel="internal" class="btn" style="margin-right: 15px;">Cadastre-se</a>
+            <a href="login.jsp" class="btn">Login</a>
+        </div>
+    </header>
+    <!--apresentação-->
+    <h1>Agenda De Contatos</h1>
+    <Section class="img">
+      
+    </Section>
+    <main>
+        <section id="apresentacao">
+            <h1 class="titulo">O que é?</h1>
+            <p>O projeto agenda de contatos é um site feito por <a href="https://www.instagram.com/pedropaulinopires/" target="_blank" rel="external" >Pedro Herique</a> para os estudos, onde o usuário cria uma conta e tem acesso a uma agenda virtual para salvar seus contatos, podendo colocar nome, email e telefone; e melhor ainda... <strong>sem limite!</strong> </p>
+            <p>
+                Caso tenha se interessado você pode criar sua conta <a href="criar.jsp">clicando  aqui</a> ou se já possui o cadastro, <a href="login.jsp">logar aqui</a> .
+            </p>
+        </section>
+       
+    </main>
+    <section id="tecnologias">
+        <h1>Técnologias utilizadas</h1>
+        <div class="cards">
+            <!--cards te tecnologias-->
+            <div class="card">
+                <!--html-->
+                <div class="card-header">
+                    <h1 class="titulo">Html</h1>
+                    <img src="imagens/html.png" alt="">
+                </div>
+                <div class="card-body">
+                    <!--descrição-->
+                    <p>
+                        HTML (HyperText Markup Language) é uma linguagem de marcação utilizada para criar páginas web. Ele permite adicionar estrutura, conteúdo e formatação a um documento eletrônico, como texto, imagens e links. HTML é uma tecnologia básica e fundamental para o desenvolvimento de sites na internet.
+                    </p>
+                    <div class="veja">
+                        <a class="btn1" href="https://pt.wikipedia.org/wiki/HTML" target="_blank" rel="external">Veja mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!--css-->
+                <div class="card-header">
+                    <h1 class="titulo">Css</h1>
+                    <img  src="imagens/css.png" alt="">
+                </div>
+                <div class="card-body">
+                    <p>
+                        Além de aplicar estilos básicos, como fontes e cores, o CSS também permite criar layouts complexos, animações, responsividade para diferentes tamanhos de tela e muito mais. Ele é uma tecnologia fundamental para o design de páginas web, permitindo aos desenvolvedores controlar de forma precisa como o conteúdo HTML será apresentado aos usuários.
+                    </p>
+                    <div class="veja">
+                        <a class="btn1" href="https://pt.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" rel="external">Veja mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!--js-->
+                <div class="card-header">
+                    <h1 class="titulo">JavaScript</h1>
+                    <img src="imagens/js.png" alt="">
+                </div>
+                <div class="card-body">
+                    <p>
+                        JavaScript é uma linguagem de programação de script, dinâmica e orientada a objetos. Ele é amplamente utilizado na criação de páginas web interativas e aplicações web. Com JavaScript, é possível adicionar funcionalidades a páginas HTML, como formulários de validação, animações, gráficos dinâmicos, entre outros.
+                    </p>
+                    <div class="veja">
+                        <a class="btn1" href="https://pt.wikipedia.org/wiki/JavaScript" target="_blank" rel="external">Veja mais</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="cards1">
+            <div class="card">
+                <!--java-->
+                <div class="card-header">
+                    <h1 class="titulo">Java</h1>
+                    <img src="imagens/java.png" alt="">
+                </div>
+                <div class="card-body">
+                    <p>
+                        Java é uma linguagem de programação de propósito geral, orientada a objetos e altamente portável. É amplamente utilizada para desenvolvimento de aplicações desktop, servidores, dispositivos móveis, jogos e muito mais. Java oferece inúmeras bibliotecas e ferramentas para desenvolvimento, além de ser uma das linguagens mais utilizadas no mundo empresarial devido à sua escalabilidade e segurança.
+                    </p>
+                    <div class="veja">
+                        <a class="btn1" href="https://pt.wikipedia.org/wiki/Java" target="_blank" rel="external">Veja mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!--mysql-->
+                <div class="card-header">
+                    <h1 class="titulo">Mysql</h1>
+                    <img src="imagens/mysql.png" alt="">
+                </div>
+                <div class="card-body">
+                    <p>
+                        Quando se fala de Java e MySQL juntos, significa que o Java está sendo utilizado para se conectar e manipular dados no banco de dados MySQL. Isso permite criar aplicações web dinâmicas e robustas, com capacidade de acesso a grandes quantidades de dados armazenados no MySQL. A combinação de Java e MySQL é amplamente utilizada em aplicações empresariais e é uma solução poderosa e confiável para o desenvolvimento de aplicações web.
+                    </p>
+                    <div class="veja">
+                        <a class=" btn1" href="https://pt.wikipedia.org/wiki/MySQL" target="_blank" rel="external">Veja mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--scroll to top-->
+    <div class="scrollTop" onclick="scrollToTop()">
+        <span style="font-size: 2.5rem;text-align: center;" class="material-symbols-outlined">
+            expand_less
+            </span>
+    </div>
+    <footer>
+        <p>Site criado por <a href="">Pedro Henrique</a> para os estudos
+        </p>
+    </footer>
+    <!--scripts-->
+    <script src="js/scrollRevelApi.js"></script>
+    <script src="js/scrollTop.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>

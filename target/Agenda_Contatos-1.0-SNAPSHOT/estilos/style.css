@@ -1,0 +1,138 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+/*mobile first*/
+:root {
+    --cor1: #2616d9;
+    --cor2: #5b4dff;
+    --cor3: #d93c2b;
+    --cor4: #d9b800;
+    --cor5: #00a34c;
+    font-family: "Open Sans", sans-serif;
+    --font_open: "Open Sans", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+input,
+textarea,
+a,
+div,
+span,
+button,
+select {
+    -webkit-tap-highlight-color: #00000000;
+}
+body {
+    background-color: var(--cor1);
+    height: 100vh;
+}
+div#form {
+    background-color: white;
+    display: block;
+    width: 80vw;
+    height: 500px;
+    margin: auto;
+    margin-top: 10%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.589);
+    transition: all 0.3s;
+    transition-timing-function: ease;
+}
+div#form a {
+    font-size: 0.9em;
+}
+p#function {
+    margin-top: 15px;
+}
+div#container-img {
+    background-image: url(../imagens/telhado.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 170px;
+    display: block;
+}
+div#container-form {
+    padding: 10px 10px 0px 10px;
+    display: block;
+}
+
+div#container-form h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--cor1);
+}
+div.campo {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: var(--cor2);
+    padding: 2px;
+    border-radius: 5px;
+}
+div.campo label {
+    font-weight: 700;
+    color: white;
+}
+div.campo input {
+    height: 25px;
+    width: calc(100% - 59px);
+    border-radius: 5px;
+    border: 0;
+    font-size: 1.05em;
+    padding-left: 5px;
+}
+input#botao {
+    display: block;
+    width: 55vw;
+    height: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+p.msg_erro {
+    background-color: rgba(199, 0, 0, 0.322);
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    padding: 10px;
+}
+input#botao {
+    background-color: var(--cor1);
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    font-weight: bolder;
+    height: 40px;
+    font-size: 1.1em;
+    transition: all 0.3s;
+}
+input#botao:hover {
+    opacity: .8;
+    transition: all 0.3s;
+}
+p#function {
+    text-align: center;
+}
+p.msg_exito{
+    background-color: rgba(0, 255, 38, 0.483);
+    border: 1px solid green;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    padding: 10px;
+}

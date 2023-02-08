@@ -1,0 +1,263 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+/*mobile first*/
+:root {
+  --cor1: #2616d9;
+  --cor2: #5b4dff;
+  --cor3: #d93c2b;
+  --cor4: #d9b800;
+  --cor5: #00a34c;
+  font-family: "Open Sans", sans-serif;
+  --font_open: "Open Sans", sans-serif;
+}
+body {
+  overflow-x: hidden;
+  background-color: rgb(75, 75, 244);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+#menu-hamburguer {
+  padding-left: 25px;
+}
+#menu-maior {
+  display: none;
+}
+header {
+  background-color: var(--cor1);
+  height: 55px;
+  width: 100vw;
+
+  box-shadow: -8px -3px 20px rgba(0, 0, 0, 0.538);
+}
+header span {
+  transition: all 0.3s;
+}
+#myNav {
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--cor1);
+  overflow: hidden;
+  z-index: 9;
+  transition: all 0.5s;
+}
+#overlay-content a {
+  display: block;
+  margin-bottom: 50px;
+  font-size: 1.5em;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#overlay-content a:hover {
+  color: var(--cor4);
+  transition: all 0.3s;
+}
+#overlay-content {
+  text-align: center;
+}
+#opcoes {
+  margin-top: -31px;
+  text-align: end;
+  padding-right: 25px;
+  display: block;
+  z-index: 0;
+}
+#btn-open {
+  display: inline;
+  color: white;
+  font-size: 2.5rem;
+  text-align: start;
+  position: relative;
+  top: 5px;
+  z-index: 1;
+}
+#btn-open:hover {
+  color: var(--cor4);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn {
+  background-color: var(--cor4);
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.2rem;
+  color: var(--cor2);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1em;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: white;
+  font-weight: 800;
+  text-shadow: -1px 5px 0px rgba(0, 0, 0, 0.357);
+}
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+
+}
+strong {
+  color: var(--cor1);
+}
+.img {
+  background-image: url(../imagens/caderno-fundo.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+#apresentacao {
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid black;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  border-radius: 0.5rem;
+}
+.titulo{
+  color: var(--cor1);
+  font-size: 2rem;
+  text-shadow: -1px 2px 1px black;
+}
+#apresentacao p {
+  line-height: 2.5em;
+  text-align: justify;
+}
+#apresentacao a {
+  color: var(--cor1);
+  font-weight: 700;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#apresentacao a:hover {
+  opacity: 0.8;
+}
+#tecnologias {
+  width: 100vw;
+  text-align: center;
+}
+.cards{
+  display: block;
+  padding-right: 1rem;
+}
+.card {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 90%;
+  padding: 1rem;
+  max-width: 400px;
+  border: 1px solid rgb(125, 125, 125);
+  margin-bottom: 150px;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.335);
+}
+.card-header h1 {
+  margin-top: 50px;
+}
+.card-header {
+  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.card-header img {
+  width: 265px;
+}
+.card-body {
+  padding: 1rem;
+  text-align: justify;
+  line-height: 2.5em;
+}
+
+.veja {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.btn1 {
+  background-color: var(--cor1);
+  color: white;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1em;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.btn1:hover {
+  opacity: 0.8;
+}
+footer {
+  background-color: var(--cor1);
+  color: white;
+  text-align: center;
+}
+footer a {
+  color: var(--cor4);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+footer a:hover {
+  opacity: 0.8;
+}
+.scrollTop {
+  position: fixed;
+  left: 80%;
+  top: 100%;
+  background-color: var(--cor1);
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 10;
+  color: white;
+  pointer-events: none;
+  transition: all 0.5s ease 0s;
+}
+.scrollTop:hover {
+  color: var(--cor4);
+}
+.scrollTop.active {
+  opacity: 1;
+  pointer-events: all;
+  top: 84%;
+}
+
+/*add scroll revel*/
+#apresentacao,#tecnologias,.card{
+  visibility: hidden;
+}
+@media screen and (min-width: 420px) {
+  .scrollTop {
+    left: 90%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .scrollTop {
+    left: 95%;
+  }
+  .scrollTop.active {
+    top: 90%;
+  }
+}

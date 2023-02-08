@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+:root{
+    --cor1:#2616D9;
+    --cor2:#5b4dff;
+    --cor3:#D93C2B;
+    --cor4:#D9B800;
+    --cor5:#00a34c;
+    font-family: 'Open Sans', sans-serif;
+    --font_open:'Open Sans', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+@media all and (min-width: 768px) {
+    div#formulario{
+        padding: 0px 0px 0px 10px;
+    }
+    div#img{
+        display: block;
+        width: 50%;
+        float: right;
+        background-image: url(../imagens/caderno.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+    }
+    div#formulario-container{
+        display: block;
+        width: 50%;
+        float: left;
+        padding-right: 10px;
+    }
+}
+
+@media all and (min-width: 992px) {
+    div#formulario{
+        max-width: 1200px;
+    }
+    div#botoes a:hover {
+        opacity: .8;
+    }
+    div#botoes input:hover {
+        opacity: .8;
+    }
+}

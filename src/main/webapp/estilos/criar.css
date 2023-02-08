@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+/*mobile first*/
+:root {
+    --cor1: #2616d9;
+    --cor2: #5b4dff;
+    --cor3: #d93c2b;
+    --cor4: #d9b800;
+    --cor5: #00a34c;
+    font-family: "Open Sans", sans-serif;
+    --font_open: "Open Sans", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+a,
+div,
+span,
+button,
+select {
+    -webkit-tap-highlight-color: #00000000;
+}
+body {
+    background-color: var(--cor1);
+}
+main {
+    overflow: hidden;
+    background-color: white;
+    height: 630px;
+    width: 80vw;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.378);
+    transition: all 0.3s;
+}
+p.msg-erro {
+    background-color: rgba(255, 0, 0, 0.435);
+    border: 1px solid red;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right:  5px;
+    margin-left: 5px;
+    text-align: center;
+    max-width: 100;
+    display: block;
+}
+
+form h1 {
+    text-align: center;
+    color: var(--cor1);
+    padding-top: 0px;
+    margin-bottom: 25px;
+}
+div#container-img {
+    display: block;
+}
+div#container-form {
+    display: block;
+}
+div {
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+div label{
+    display: block;
+}
+div input {
+    font-size: 1em;
+    padding: 5px;
+    border: 1px solid var(--cor1);
+    border-radius: 8px
+}
+input.caixa{
+    width: 90%;
+}
+div#botoes {
+    margin-bottom: 1vh;
+}
+
+div#botoes input {
+    background-color: var(--cor1);
+    border: 0;
+    color: white;
+    font-weight: normal;
+    font-size: 1.2em;
+    padding: 10px 35px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+div#botoes input:hover {
+    opacity: .8;
+    transition: all 0.3s;
+}
+
+div#botoes a {
+    background-color: var(--cor3);
+    border: 0;
+    color: white;
+    font-weight: normal;
+    font-size: 1.2em;
+    padding: 7.5px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 1vw;
+    transition: all 0.3s;
+}
+div#botoes a:hover {
+    opacity: .8;
+    transition: all 0.3s;
+}

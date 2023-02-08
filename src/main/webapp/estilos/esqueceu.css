@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+:root{
+    --cor1:#2616D9;
+    --cor2:#5b4dff;
+    --cor3:#D93C2B;
+    --cor4:#D9B800;
+    --cor5:#00a34c;
+    font-family: 'Open Sans', sans-serif;
+    --font_open:'Open Sans', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+body{
+    background-color: var(--cor1);
+}
+
+main{
+    background-color: white;
+    width: 80vw;
+    height: 600px;
+    display: block;
+    margin: auto;
+    margin-top: 15vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39) ;
+    border-radius: 8px;
+    overflow: hidden;
+}
+h1{
+    color: var(--cor1);
+    display: block;
+    text-align: center;
+    margin-bottom:40px ;
+    margin-top: 10px;
+}
+p{
+    display: block;
+    margin: auto;
+    text-align: center;
+    line-height: 1.9em;
+    position: relative;
+    top: 50px;
+}
+div#container-img{
+    display: block;
+}
+form{
+    display: block;
+}
+div#campo {
+    position: relative;
+    top: 50px;
+    margin-top: 25px;
+}
+div#campo label{
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+}
+div#campo input{
+    margin-top: 5px;
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    border: 1px solid var(--cor1);
+}
+div#botoes{
+    display: block;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#botoes input {
+    background-color: var(--cor1);
+    border: 0;
+    color: white;
+    font-weight: normal;
+    font-size: 1.2em;
+    padding: 10px 35px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+div#botoes input:hover {
+    opacity: .8;
+    transition: all 0.3s;
+}
+
+div#botoes a {
+    background-color: var(--cor3);
+    border: 0;
+    color: white;
+    font-weight: normal;
+    font-size: 1.2em;
+    padding: 7.5px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 1vw;
+    transition: all 0.3s;
+    display: inline-block;
+    margin-top: 5px;
+}
+div#botoes a:hover {
+    opacity: .8;
+    transition: all 0.3s;
+}
+p#msg-erro{
+    background-color: rgba(255, 0, 0, 0.483);
+    border: 1px solid red;
+    position: relative;
+    width: 400px;
+    top: 70px;
+    transition: all .3s;
+}
+p#msg-exito{
+    background-color: rgba(0, 255, 38, 0.483);
+    border: 1px solid green;
+    position: relative;
+    width: 400px;
+    top: 0px;
+    transition: all .3s;
+}

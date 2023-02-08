@@ -1,0 +1,58 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+/*mobile first*/
+:root {
+    --cor1: #2616d9;
+    --cor2: #5b4dff;
+    --cor3: #d93c2b;
+    --cor4: #d9b800;
+    --cor5: #00a34c;
+    font-family: "Open Sans", sans-serif;
+    --font_open: "Open Sans", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+a,
+div,
+span,
+button,
+select {
+    -webkit-tap-highlight-color: #00000000;
+}
+/*estilo para a pagina de criar */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    p.msg-erro{
+        margin-left: 25px;
+        margin-right: 25px
+    }
+    div#container-img{
+        padding: 0px;
+        float: right;
+        background-image: url(../imagens/pexels-cottonbro-studio-3585089.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 800px;
+        width: 50%;
+    }
+    div#container-form{
+        float: left;
+        display: block;
+        width: 50%;
+    }
+   
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+}

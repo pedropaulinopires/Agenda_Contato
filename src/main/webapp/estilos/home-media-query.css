@@ -1,0 +1,153 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+:root {
+  --cor1: #2616d9;
+  --cor2: #5b4dff;
+  --cor3: #d93c2b;
+  --cor4: #d9b800;
+  --cor5: #00a34c;
+  font-family: "Open Sans", sans-serif;
+  --font_open: "Open Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+@media screen and (min-width: 768px) {
+  header {
+    height: 60px;
+  }
+  p#msg {
+    margin-top: 0;
+    top: 20px;
+    z-index: 9;
+    display: inline-block;
+    width: 80%;
+    left: 70%;
+    text-align: left;
+    word-break: break-all;
+  }
+  div.overlay {
+    height: 122px;
+    top: -59px;
+    text-align: left;
+    padding-left: 10px;
+    position: absolute;
+  }
+  div.overlay-content {
+    display: inline;
+    height: 100px;
+  }
+  div.overlay-content a {
+    display: inline-block;
+    font-size: 1em;
+    margin-left: 25px;
+    margin-bottom: 0px;
+  }
+  span#closebtn {
+    display: none;
+  }
+  span#openbnt {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  div#img {
+    height: 500px;
+  }
+  table thead {
+    background-color: white;
+  }
+  table thead th {
+    padding: 5px 10px;
+  }
+  table tbody {
+    background-color: white;
+  }
+  table tbody td {
+    padding: 5px 30px;
+    text-align: center;
+    word-break: break-word;
+    height: 80px;
+  }
+  table td#botao {
+    text-align: center;
+    padding: 0px 0px;
+    height: 50px;
+    width: 200px;
+  }
+  /*adicionando os hovers*/
+  div.overlay-content a:hover {
+    color: var(--cor4);
+    transition: all 0.3s;
+  }
+  .bnt1:hover {
+    opacity: 0.8;
+  }
+  .bnt2:hover {
+    opacity: 0.8;
+  }
+  span#closebtn {
+    display: none;
+  }
+  span#openbnt {
+    display: none;
+  }
+  #botoes input:hover {
+    opacity: 0.8;
+  }
+  #botoes span:hover {
+    opacity: 0.8;
+  }
+  #modalSair-body span:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  #modalSair-body a:hover {
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    display: block;
+    background-color: white;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  table tbody tr:nth-child(even) {
+    background-color: darkgray;
+  }
+  table tbody td {
+    border-bottom: 1px solid black;
+    display: block;
+    padding: 5px 5px;
+    text-align: center;
+    height: 100px;
+    word-break: break-word;
+  }
+  table tbody td::before {
+    content: attr(data-title);
+    padding-bottom: 15px;
+    left: 5;
+    display: block;
+    text-align: left;
+    font-weight: 700;
+  }
+  table td#botao {
+    text-align: center;
+    padding: 0px 0px;
+    height: 50px;
+  }
+}

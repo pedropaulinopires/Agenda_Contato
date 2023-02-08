@@ -1,0 +1,608 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+:root {
+    --cor1: #2616d9;
+    --cor2: #5b4dff;
+    --cor3: #d93c2b;
+    --cor4: #d9b800;
+    --cor5: #00a34c;
+    font-family: "Open Sans", sans-serif;
+    --font_open: "Open Sans", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header#menu-mobile{
+    background-color: var(--cor1);
+    color: white;
+}
+span#openbnt{
+    font-size: 2.5em;
+    transition: all .3s;
+    display: inline;
+    z-index: 9;
+}
+div#msg-execucao{
+    background-color: rgba(1, 195, 1, 0.735);
+    border: 1px solid rgb(0, 76, 0);
+    padding: 1rem;
+    width: 50%;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+div#msg-execucao-erro{
+    background-color: rgba(205, 0, 0, 0.735);
+    border: 1px solid rgb(108, 0, 0);
+    padding: 1rem;
+    width: 50%;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+p#msg{
+    display: block;
+    position: relative;
+    top: -15px;
+    z-index: 0;
+    text-align: center;
+    margin: auto;
+}
+span#openbnt:active{
+    color: var(--cor4);
+    transition: all .5s;
+
+}
+span#closebtn{
+    font-size: 2.5em;
+    transition: all .3s;
+}
+span#closebtn:active{
+    color: var(--cor4);
+    transition: all .5s;
+}
+div.overlay{
+    background-color: var(--cor1);
+    width: 100%;
+    height: 0;
+    position: fixed;
+    z-index: 2;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+}
+div.overlay-content a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    display: block ;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 80px;
+    transition: all .3s;
+}
+div.overlay-content a:active{
+    color: var(--cor4);
+    transition: all .3s;
+}
+div#opcoes{
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+}
+div#opcoes a{
+    margin-left:10px ;
+}
+.bnt1{
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    background-color: var(--cor1);
+    padding: 5px 10px;
+    border-radius: 8px;
+    opacity: 1;
+}
+.bnt2{
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    background-color: var(--cor3);
+    padding: 5px 10px;
+    border-radius: 8px;
+    opacity: 1;
+}
+.bnt1:active{
+    opacity: .8;
+    transition: all .3s;
+}
+.bnt2:active{
+    opacity: .8;
+    transition: all .3s;
+}
+main{
+    min-width:50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+div#img{
+    background-image: url(../imagens/agenda.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
+table{
+    background-color: var(--cor1);
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.437);
+}
+div#msg{
+    background-color: var(--cor1);
+    width: 250px;
+    height: 130px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.437);
+}
+div#msg p{
+    background-color: white;
+}
+span#emoji{
+    display: block;
+    font-size: 3em;
+}
+div#limpar{
+    background-color: var(--cor1);
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.437);
+    width: 80%;
+    margin: auto;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    margin-top: 50px;
+}
+div#limpar-interno{
+    background-color: white;
+    height: 50px;
+    padding-top: 14px;
+}
+footer{
+    position: relative;
+    background-color: var(--cor1);
+    color: white;
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+}
+footer p{
+    text-align: center;
+    display: block;
+}
+footer p a{
+    text-decoration: none;
+    color:var(--cor4);
+    font-weight: 700;
+}
+
+#scrollTopButton {
+    font-size: 2.5rem;
+}
+.scrollTop {
+    position: fixed;
+    left: 90%;
+    top: 80%;
+    background-color: var(--cor1);
+    font-size: 2rem;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 10;
+    color: white;
+    pointer-events: none;
+    transition: all 0.5s ease 0s;
+}
+@media screen and (max-width:500px){
+    .scrollTop {
+        left: 85%
+    }
+}
+.scrollTop:active {
+    transition: all 0.5s ease 0s;
+    color: var(--cor4);
+}
+.active {
+    opacity: 1;
+    pointer-events: all;
+    top: 90%;
+}
+
+.scroll.active {
+    scroll-behavior: auto;
+}
+/*modais*/
+#fade {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.516);
+    z-index: 5;
+    position: fixed;
+}
+
+#modalAdd {
+    background-color: white;
+    max-width: 500px;
+    width: 80%;
+    z-index: 10;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    opacity: 1;
+    pointer-events: all;
+    border-radius: 0.5rem;
+    transition: all 0.5s;
+}
+#modalAdd-header h1 {
+    color: var(--cor1);
+    text-align: center;
+    border-bottom: 1px solid var(--cor1);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+#campo {
+    text-align: center;
+}
+#campo label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+#campo input {
+    margin-bottom: 1rem;
+    width: 80%;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--cor1);
+    padding-left: 5px;
+}
+div#botoes {
+    text-align: center;
+    margin-top: 25px;
+}
+#botoes input {
+    border: none;
+    background-color: var(--cor1);
+    color: white;
+    font-weight: 500;
+    padding: 7.5px 15px;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    opacity: 1;
+    margin-right: 0.5rem;
+    transition: all 0.3s;
+}
+#botoes span {
+    border: none;
+    background-color: var(--cor3);
+    color: white;
+    font-weight: 500;
+    padding: 5px 15px;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    opacity: 1;
+    transition: all 0.3s;
+}
+#botoes input:active {
+    opacity: 0.8;
+}
+#botoes span:active {
+    opacity: 0.8;
+}
+#modalAdd.hide,
+#fade.hide,#modalSair.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+/*modal para sair*/
+#modalSair {
+    background-color: white;
+    position: fixed;
+    max-width: 500px;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    opacity: 1;
+    border-radius: 0.5rem;
+    pointer-events: all;
+    transition: all .3s;
+}
+#fade1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.516);
+    z-index: 5;
+    position: fixed;
+    opacity: 1;
+    pointer-events: all;
+}
+#fade1.hide1{
+    opacity: 0;
+    pointer-events: none;
+}
+#modalSair-header h1 {
+    text-align: center;
+    color: var(--cor1);
+    border-bottom: 1px solid var(--cor1);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+#modalSair-body {
+    text-align: center;
+}
+#modalSair-body p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#modalSair-body span {
+    border: none;
+    background-color: var(--cor3);
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 15px;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all .3s;
+}
+#modalSair a {
+    border: none;
+    background-color: var(--cor1);
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 15px;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    transition: all .3s;
+}
+#modalSair span:active {
+    opacity: 0.8;
+}
+#modalSair a:active {
+    opacity: 0.8;
+}
+
+
+#modalEditar {
+    background-color: white;
+    position: fixed;
+    max-width: 500px;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    opacity: 0;
+    border-radius: 0.5rem;
+    pointer-events: none;
+    transition: all .3s;
+}
+#fade2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.516);
+    z-index: 5;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+#fade2.hide2{
+    opacity: 0;
+    pointer-events: none;
+}
+#modalEditar-header h1 {
+    text-align: center;
+    color: var(--cor1);
+    border-bottom: 1px solid var(--cor1);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+#modalEditar-body {
+    text-align: center;
+}
+#modalEditar-body p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#modalEditar-body span {
+    border: none;
+    background-color: var(--cor3);
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 15px;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all .3s;
+}
+#modalEditar a {
+    border: none;
+    background-color: var(--cor1);
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 15px;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    transition: all .3s;
+}
+#modalEditar span:active {
+    opacity: 0.8;
+}
+#modalEditar a:active {
+    opacity: 0.8;
+}
+
+#fade3 {
+    background-color: rgba(0, 0, 0, 0.522);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+#modalLimpar {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 80%;
+    max-width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+
+}
+#modalLimpar-header {
+    text-align: center;
+    color: var(--cor1);
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+#modalLimpar-body {
+    text-align: center;
+}
+
+#modalLimpar button,#modalLimpar a {
+    background-color: var(--cor1);
+    font-size: 1.2rem;
+    border: none;
+    opacity: 1;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.25rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+#modalLimpar .btn2 {
+    background-color: var(--cor3);
+    margin-left: 0.45rem;
+    height: 40px
+}
+
+#modalLimpar button:hover,#modalLimpar a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#fade4{
+    background-color: rgba(0, 0, 0, 0.522);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+#modalExcluir{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 80%;
+    max-width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+#modalExcluir-header {
+    text-align: center;
+    color: var(--cor1);
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+#modalExcluir-body {
+    text-align: center;
+}
+
+#modalExcluir a,#modalExcluir a {
+    background-color: var(--cor1);
+    font-size: 1.2rem;
+    border: none;
+    opacity: 1;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.25rem;
+    border: none;
+    color: white;
+    transition: all 0.3s;
+}
+#modalExcluir div#botoes input{
+    height: 40px;
+}
+#modalExcluir a{
+    background-color: var(--cor3);
+}
+#modalExcluir a:hover{
+    opacity: .8;
+}
+#modalExcluir div#botoes input:hover{
+    opacity: .8;
+}
+
+
+
+
+@media screen and (max-width:290px) {
+    #modalLimpar button.btn2 {
+        margin-top: 1rem;
+
+    }
+    #modalExcluir button{
+        margin-top: 1rem;
+    }
+}

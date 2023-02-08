@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+:root {
+    --cor1: #2616d9;
+    --cor2: #5b4dff;
+    --cor3: #d93c2b;
+    --cor4: #d9b800;
+    --cor5: #00a34c;
+    font-family: "Open Sans", sans-serif;
+    --font_open: "Open Sans", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+html{
+    overflow-x: hidden;
+}
+body{
+    background-color: var(--cor1);
+}
+
+div#formulario{
+    margin: auto;
+    margin-top: 10%;
+    width: 90vw;
+    background-color: white;
+    height: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.341);
+    padding: 0px 10px ;
+}
+
+div#formulario h1{
+    color: var(--cor1);
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+div#formulario div label{
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+}
+
+input.caixa{
+    width: 100%;
+    height: 30PX;
+    font-size: 1rem;
+    padding-left: 5px;
+    border: 1px solid var(--cor1) ;
+    border-radius: 8px;
+}
+div#sexo{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+div#botoes{
+    text-align: center;
+}
+div#botoes input {
+    background-color: var(--cor1);
+    border: 0;
+    color: white;
+    font-weight: normal;
+    font-size: 1.2em;
+    padding: 10px 35px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+div#botoes input:active {
+    opacity: .8;
+    transition: all 0.3s;
+}
+
+div#botoes a {
+    background-color: var(--cor3);
+    border: 0;
+    color: white;
+    font-weight: normal;
+    font-size: 1.2em;
+    padding: 7.5px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 1vw;
+    transition: all 0.3s;
+}
+div#botoes a:active {
+    opacity: .8;
+    transition: all 0.3s;
+}
+p#msg-erro{
+    background-color:rgba(235, 103, 103, 0.641);
+    border: 1px solid red;
+    display: block;
+    width: 85%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    padding: 10px;
+}

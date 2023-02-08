@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+
+:root{
+    --cor1:#2616D9;
+    --cor2:#5b4dff;
+    --cor3:#D93C2B;
+    --cor4:#D9B800;
+    --cor5:#00a34c;
+    font-family: 'Open Sans', sans-serif;
+    --font_open:'Open Sans', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    div#container-img{
+        display: block;
+        float: right;
+        width:50%;
+        background-image: url(../imagens/senha.jpg);
+        background-size: cover;
+        background-position: top center;
+        height: 100%;
+    }
+    form{
+        display: block;
+        float: left;
+        width: 50%;
+    }
+    p{
+        width: 90%;
+    }
+    div#campo input{
+        width: 95%;
+        display: block;
+        margin: auto;
+    }
+    p#msg-erro{
+        width: 300px;
+    }
+    p#msg-exito{
+        width: 300px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media  screen and (min-width: 992px){
+
+}
