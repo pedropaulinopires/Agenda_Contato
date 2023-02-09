@@ -63,11 +63,59 @@ public class EditarLoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processar a edição do login
+        //pegar os dados do usuario
         HttpSession session = request.getSession();
         l = (Login) session.getAttribute("usuarioLogado");
+        //pegar o email
         String email = request.getParameter("email");
-        Login l1 = LoginDAO.buscarLoginEmail(email);
-        if (email.equals(l.getEmail())) {
+        Login l1;
+        //procurar se existe se o email for diferente
+        if (!l.getEmail().equals(email)) {
+            l1 = LoginDAO.buscarLoginEmail(email);
+            if (l1 == null) {
+                l.setNome(request.getParameter("nome"));
+                request.setAttribute("nome", request.getParameter("nome"));
+
+                l.setSobrenome(request.getParameter("sobrenome"));
+                request.setAttribute("sobrenome", request.getParameter("sobrenome"));
+
+                l.setEmail(email);
+                request.setAttribute("email", email);
+
+                l.setSenha(request.getParameter("senha"));
+                request.setAttribute("senha", request.getParameter("senha"));
+
+                String sexo = request.getParameter("sexo");
+                if (sexo.equals("M")) {
+                    l.setSexo(Sexo.M);
+                    request.setAttribute("sexo", "M");
+                } else {
+                    l.setSexo(Sexo.F);
+                    request.setAttribute("sexo", "F");
+                }
+                LoginDAO.atualizarLogin(l);
+                request.setAttribute("exitoEditar", "Edição feita com sucesso!");
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.forward(request, response);
+
+            } else {
+                //redirecionar para o erro
+                request.setAttribute("nome", request.getParameter("nome"));
+                request.setAttribute("sobrenome", request.getParameter("sobrenome"));
+                request.setAttribute("email", email);
+                request.setAttribute("senha", request.getParameter("senha"));
+                String sexo = request.getParameter("sexo");
+                if (sexo.equals("M")) {
+                    request.setAttribute("sexo", "M");
+                } else {
+                    request.setAttribute("sexo", "F");
+                }
+
+                request.setAttribute("erroEditar", "erro ao editar!");
+                RequestDispatcher rd = request.getRequestDispatcher("editar.jsp");
+                rd.forward(request, response);
+            }
+        } else {
             l.setNome(request.getParameter("nome"));
             request.setAttribute("nome", request.getParameter("nome"));
 
@@ -91,46 +139,6 @@ public class EditarLoginServlet extends HttpServlet {
             LoginDAO.atualizarLogin(l);
             request.setAttribute("exitoEditar", "Edição feita com sucesso!");
             RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-            rd.forward(request, response);
-        } else if (!email.equals(l1.getEmail())) {
-            l.setNome(request.getParameter("nome"));
-            request.setAttribute("nome", request.getParameter("nome"));
-
-            l.setSobrenome(request.getParameter("sobrenome"));
-            request.setAttribute("sobrenome", request.getParameter("sobrenome"));
-
-            l.setEmail(email);
-            request.setAttribute("email", email);
-
-            l.setSenha(request.getParameter("senha"));
-            request.setAttribute("senha", request.getParameter("senha"));
-
-            String sexo = request.getParameter("sexo");
-            if (sexo.equals("M")) {
-                l.setSexo(Sexo.M);
-                request.setAttribute("sexo", "M");
-            } else {
-                l.setSexo(Sexo.F);
-                request.setAttribute("sexo", "F");
-            }
-            LoginDAO.atualizarLogin(l);
-            request.setAttribute("exitoEditar", "Edição feita com sucesso!");
-            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-            rd.forward(request, response);
-        } else if (email.equals(l1.getEmail())) {
-            request.setAttribute("nome", request.getParameter("nome"));
-            request.setAttribute("sobrenome", request.getParameter("sobrenome"));
-            request.setAttribute("email", email);
-            request.setAttribute("senha", request.getParameter("senha"));
-            String sexo = request.getParameter("sexo");
-            if (sexo.equals("M")) {
-                request.setAttribute("sexo", "M");
-            } else {
-                request.setAttribute("sexo", "F");
-            }
-
-            request.setAttribute("erroEditar", "erro ao editar!");
-            RequestDispatcher rd = request.getRequestDispatcher("editar.jsp");
             rd.forward(request, response);
         }
 

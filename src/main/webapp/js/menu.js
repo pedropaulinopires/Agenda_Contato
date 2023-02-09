@@ -1,12 +1,14 @@
 function openNav(){
-    
+    if(window.innerWidth <= 768){
         document.getElementById("myNav").style.height= '100%'
-    
+    }
     
 }
 
 function closeNav(){
-   
-        document.getElementById("myNav").style.height= '0%'
+       if(window.innerWidth <= 768){
+           document.getElementById("myNav").style.height= '0%'
+       }
+        
    
 }
